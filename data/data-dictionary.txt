@@ -1,0 +1,1616 @@
+DATA DICTIONARY
+
+FDEYEP      Character   1
+Vision difficulty allocation flag
+            0    .No
+            1    .Yes
+
+JWMNP       Numeric     3
+Travel time to work
+            bbb      .N/A (not a worker or worker who worked at home)
+            1..200   .1 to 200 minutes to get to work (Top-coded)
+
+ENG         Character   1
+Ability to speak English
+            b    .N/A (less than 5 years old/speaks only English)
+            1    .Very well
+            2    .Well
+            3    .Not well
+            4    .Not at all
+            
+OC          Character   1
+Own child
+            b    .N/A (in GQ)
+            0    .No
+            1    .Yes
+
+COW         Character   1
+Class of worker
+            b    .N/A (less than 16 years old/NILF who last worked more than 5 years ago or never worked)
+            1    .Employee of a private for-profit company or business, or of an individual, for wages, salary, or commissions
+            2    .Employee of a private not-for-profit, tax-exempt, or charitable organization
+            3    .Local government employee (city, county, etc.)
+            4    .State government employee
+            5    .Federal government employee
+            6    .Self-employed in own not incorporated business, professional practice, or farm
+            7    .Self-employed in own incorporated business, professional practice or farm
+            8    .Working without pay in family business or farm
+            9    .Unemployed and last worked 5 years ago or earlier or never worked
+
+HICOV       Character   1
+Health insurance coverage recode
+            1    .With health insurance coverage
+            2    .No health insurance coverage
+
+LANP        Character   4
+Language spoken at home
+            bbbb       .N/A (GQ/vacant)
+            1000       .Jamaican Creole English
+            1025       .Other English-based Creole languages
+            1055       .Haitian
+            1069       .Kabuverdianu
+            1110       .German
+            1120       .Swiss German
+            1125       .Pennsylvania German
+            1130       .Yiddish
+            1132       .Dutch
+            1134       .Afrikaans
+            1140       .Swedish
+            1141       .Danish
+            1142       .Norwegian
+            1155       .Italian
+            1170       .French
+            1175       .Cajun French
+            1200       .Spanish
+            1210       .Portuguese
+            1220       .Romanian
+            1231       .Irish
+            1235       .Greek
+            1242       .Albanian
+            1250       .Russian
+            1260       .Ukrainian
+            1262       .Czech
+            1263       .Slovak
+            1270       .Polish
+            1273       .Bulgarian
+            1274       .Macedonian
+            1275       .Serbocroatian
+            1276       .Bosnian
+            1277       .Croatian
+            1278       .Serbian
+            1281       .Lithuanian
+            1283       .Latvian
+            1288       .Armenian
+            1290       .Farsi
+            1292       .Dari
+            1315       .Kurdish
+            1327       .Pashto
+            1340       .India N.E.C.
+            1350       .Hindi
+            1360       .Urdu
+            1380       .Bengali
+            1420       .Punjabi
+            1435       .Konkani
+            1440       .Marathi
+            1450       .Gujarati
+            1500       .Nepali
+            1525       .Pakistan N.E.C.
+            1530       .Sinhala
+            1540       .Other Indo-Iranian languages
+            1564       .Other Indo-European languages
+            1565       .Finnish
+            1582       .Hungarian
+            1675       .Turkish
+            1690       .Mongolian
+            1730       .Telugu
+            1737       .Kannada
+            1750       .Malayalam
+            1765       .Tamil
+            1900       .Khmer
+            1960       .Vietnamese
+            1970       .Chinese
+            2000       .Mandarin
+            2030       .Min Nan Chinese
+            2050       .Cantonese
+            2100       .Tibetan
+            2160       .Burmese
+            2270       .Chin languages
+            2350       .Karen languages
+            2430       .Thai
+            2475       .Lao
+            2525       .Iu Mien
+            2535       .Hmong
+            2560       .Japanese
+            2575       .Korean
+            2715       .Malay
+            2770       .Indonesian
+            2850       .Other languages of Asia
+            2910       .Filipino
+            2920       .Tagalog
+            2950       .Cebuano
+            3150       .Ilocano
+            3190       .Other Philippine languages
+            3220       .Chamorro
+            3270       .Marshallese
+            3350       .Chuukese
+            3420       .Samoan
+            3500       .Tongan
+            3570       .Hawaiian
+            3600       .Other Eastern Malayo-Polynesian languages
+            4500       .Arabic
+            4545       .Hebrew
+            4560       .Assyrian Neo-Aramaic
+            4565       .Chaldean Neo-Aramaic
+            4590       .Amharic
+            4640       .Tigrinya
+            4830       .Oromo
+            4840       .Somali
+            4880       .Other Afro-Asiatic languages
+            4900       .Nilo-Saharan languages
+            5150       .Swahili
+            5345       .Ganda
+            5525       .Shona
+            5645       .Other Bantu languages
+            5845       .Manding languages
+            5900       .Other Mande languages
+            5940       .Fulah
+            5950       .Wolof
+            6120       .Akan (incl. Twi)
+            6205       .Ga
+            6230       .Gbe languages
+            6290       .Yoruba
+            6300       .Edoid languages
+            6370       .Igbo
+            6500       .Other Niger-Congo languages
+            6795       .Other languages of Africa
+            6800       .Aleut languages
+            6839       .Ojibwa
+            6930       .Apache languages
+            6933       .Navajo
+            7019       .Dakota languages
+            7032       .Muskogean languages
+            7039       .Keres
+            7050       .Cherokee
+            7060       .Uto-Aztecan languages
+            7124       .Other Native North American languages
+            7300       .Other Central and South American languages
+            9999       .Other and unspecified languages
+
+FER         Character   1
+Gave birth to child within the past 12 months
+            b    .N/A (less than 15 years/greater than 50 years/ male)
+            1    .Yes
+            2    .No
+
+PINCP       Numeric     7
+Total person's income (signed, use ADJINC to adjust to constant dollars)
+            bbbbbbb          .N/A (less than 15 years old)
+            0                .None
+            -19998           .Loss of $19998 or more (Rounded and bottom- coded components)
+            -19997..-1       .Loss $1 to $19997 (Rounded components)
+            1..4209995       .$1 to $4209995 (Rounded and top-coded components)
+
+MIGSP       Character   3
+Migration recode - State or foreign country code
+            bbb      .N/A (person less than 1 year old/lived in same house 1 year ago)
+            001      .Alabama/AL
+            002      .Alaska/AK
+            004      .Arizona/AZ
+            005      .Arkansas/AR
+            006      .California/CA
+            008      .Colorado/CO
+            009      .Connecticut/CT
+            010      .Delaware/DE
+            011      .District of Columbia/DC
+            012      .Florida/FL
+            013      .Georgia/GA
+            015      .Hawaii/HI
+            016      .Idaho/ID
+            017      .Illinois/IL
+            018      .Indiana/IN
+            019      .Iowa/IA
+            020      .Kansas/KS
+            021      .Kentucky/KY
+            022      .Louisiana/LA
+            023      .Maine/ME
+            024      .Maryland/MD
+            025      .Massachusetts/MA
+            026      .Michigan/MI
+            027      .Minnesota/MN
+            028      .Mississippi/MS
+            029      .Missouri/MO
+            030      .Montana/MT
+            031      .Nebraska/NE
+            032      .Nevada/NV
+            033      .New Hampshire/NH
+            034      .New Jersey/NJ
+            035      .New Mexico/NM
+            036      .New York/NY
+            037      .North Carolina/NC
+            038      .North Dakota/ND
+            039      .Ohio/OH
+            040      .Oklahoma/OK
+            041      .Oregon/OR
+            042      .Pennsylvania/PA
+            044      .Rhode Island/RI
+            045      .South Carolina/SC
+            046      .South Dakota/SD
+            047      .Tennessee/TN
+            048      .Texas/TX
+            049      .Utah/UT
+            050      .Vermont/VT
+            051      .Virginia/VA
+            053      .Washington/WA
+            054      .West Virginia/WV
+            055      .Wisconsin/WI
+            056      .Wyoming/WY
+            072      .Puerto Rico
+            109      .France
+            110      .Germany
+            111      .Northern Europe, Not Specified
+            113      .Eastern Europe, Not Specified
+            114      .Western Europe or Other Europe, Not Specified
+            120      .Italy
+            134      .Spain
+            138      .United Kingdom, Excluding England
+            139      .England
+            163      .Russia
+            164      .Ukraine
+            200      .Afghanistan
+            207      .China, Hong Kong, Macau And Paracel Islands
+            210      .India
+            214      .Israel
+            215      .Japan
+            217      .Korea
+            229      .Nepal
+            231      .Pakistan
+            233      .Philippines
+            235      .Saudi Arabia
+            240      .Taiwan
+            242      .Thailand
+            243      .Turkey
+            245      .United Arab Emirates
+            247      .Vietnam
+            251      .Eastern Asia, Not Specified
+            252      .Western Asia, Not Specified
+            253      .South Central Asia or Asia, Not Specified
+            301      .Canada
+            303      .Mexico
+            312      .El Salvador
+            313      .Guatemala
+            314      .Honduras
+            317      .Central America, Not Specified
+            327      .Cuba
+            329      .Dominican Republic
+            332      .Haiti
+            333      .Jamaica
+            344      .Caribbean and North America, Not Specified
+            362      .Brazil
+            364      .Colombia
+            365      .Ecuador
+            370      .Peru
+            373      .Venezuela
+            374      .South America, Not Specified
+            414      .Egypt
+            416      .Ethiopia
+            427      .Kenya
+            440      .Nigeria
+            467      .Western Africa, Not Specified
+            468      .Other Africa, Not Specified
+            469      .Eastern Africa, Not Specified
+            501      .Australia
+            555      .Other US Island Areas, Oceania, Not Specified, or At Sea
+
+SCHL        Character   2
+Educational attainment
+            bb     .N/A (less than 3 years old)
+            01     .No schooling completed
+            02     .Nursery school, preschool
+            03     .Kindergarten
+            04     .Grade 1
+            05     .Grade 2
+            06     .Grade 3
+            07     .Grade 4
+            08     .Grade 5
+            09     .Grade 6
+            10     .Grade 7
+            11     .Grade 8
+            12     .Grade 9
+            13     .Grade 10
+            14     .Grade 11
+            15     .12th grade - no diploma
+            16     .Regular high school diploma
+            17     .GED or alternative credential
+            18     .Some college, but less than 1 year
+            19     .1 or more years of college credit, no degree
+            20     .Associate's degree
+            21     .Bachelor's degree
+            22     .Master's degree
+            23     .Professional degree beyond a bachelor's degree
+            24     .Doctorate degree
+
+MIG         Character   1
+Mobility status (lived here 1 year ago)
+            b    .N/A (less than 1 year old)
+            1    .Yes, same house (nonmovers)
+            2    .No, outside US and Puerto Rico
+            3    .No, different house in US or Puerto Rico
+
+VPS         Character   2
+Veteran period of service
+            bb     .N/A (less than 17 years old, no active duty)
+            01     .Gulf War: 9/2001 or later
+            02     .Gulf War: 9/2001 or later and Gulf War: 8/1990 - 8/2001
+            03     .Gulf War: 9/2001 or later and Gulf War: 8/1990 - 8/2001 and Vietnam Era
+            04     .Gulf War: 8/1990 - 8/2001
+            05     .Gulf War: 8/1990 - 8/2001 and Vietnam Era
+            06     .Vietnam Era
+            07     .Vietnam Era and Korean War
+            08     .Vietnam Era, Korean War, and WWII
+            09     .Korean War
+            10     .Korean War and WWII
+            11     .WWII
+            12     .Between Gulf War and Vietnam Era only
+            13     .Between Vietnam Era and Korean War only
+            14     .Peacetime service before the Korean War only
+
+MIL         Character   1
+Military service
+            b    .N/A (less than 17 years old)
+            1    .Now on active duty
+            2    .On active duty in the past, but not now
+            3    .Only on active duty for training in Reserves/National Guard
+            4    .Never served in the military
+
+MAR         Character   1
+Marital status
+            1    .Married
+            2    .Widowed
+            3    .Divorced
+            4    .Separated
+            5    .Never married or under 15 years old
+
+OCCP        Character   4
+Occupation recode for 2018 and later based on 2018 OCC codes
+            bbbb       .N/A (less than 16 years old/NILF who last worked more than 5 years ago or never worked)
+            0010       .MGR-Chief Executives And Legislators
+            0020       .MGR-General And Operations Managers
+            0040       .MGR-Advertising And Promotions Managers
+            0051       .MGR-Marketing Managers
+            0052       .MGR-Sales Managers
+            0060       .MGR-Public Relations And Fundraising Managers
+            0101       .MGR-Administrative Services Managers
+            0102       .MGR-Facilities Managers
+            0110       .MGR-Computer And Information Systems Managers
+            0120       .MGR-Financial Managers
+            0135       .MGR-Compensation And Benefits Managers
+            0136       .MGR-Human Resources Managers
+            0137       .MGR-Training And Development Managers
+            0140       .MGR-Industrial Production Managers
+            0150       .MGR-Purchasing Managers
+            0160       .MGR-Transportation, Storage, And Distribution Managers
+            0205       .MGR-Farmers, Ranchers, And Other Agricultural Managers
+            0220       .MGR-Construction Managers
+            0230       .MGR-Education And Childcare Administrators
+            0300       .MGR-Architectural And Engineering Managers
+            0310       .MGR-Food Service Managers
+            0335       .MGR-Entertainment and Recreation Managers
+            0340       .MGR-Lodging Managers
+            0350       .MGR-Medical And Health Services Managers
+            0360       .MGR-Natural Sciences Managers
+            0410       .MGR-Property, Real Estate, And Community Association Managers
+            0420       .MGR-Social And Community Service Managers
+            0425       .MGR-Emergency Management Directors
+            0440       .MGR-Other Managers
+            0500       .BUS-Agents And Business Managers Of Artists, Performers, And Athletes
+            0510       .BUS-Buyers And Purchasing Agents, Farm Products
+            0520       .BUS-Wholesale And Retail Buyers, Except Farm Products
+            0530       .BUS-Purchasing Agents, Except Wholesale, Retail, And Farm Products
+            0540       .BUS-Claims Adjusters, Appraisers, Examiners, And Investigators
+            0565       .BUS-Compliance Officers
+            0600       .BUS-Cost Estimators
+            0630       .BUS-Human Resources Workers
+            0640       .BUS-Compensation, Benefits, And Job Analysis Specialists
+            0650       .BUS-Training And Development Specialists
+            0700       .BUS-Logisticians
+            0705       .BUS-Project Management Specialists
+            0710       .BUS-Management Analysts
+            0725       .BUS-Meeting, Convention, And Event Planners
+            0726       .BUS-Fundraisers
+            0735       .BUS-Market Research Analysts And Marketing Specialists
+            0750       .BUS-Business Operations Specialists, All Other
+            0800       .FIN-Accountants And Auditors
+            0810       .FIN-Property Appraisers and Assessors
+            0820       .FIN-Budget Analysts
+            0830       .FIN-Credit Analysts
+            0845       .FIN-Financial And Investment Analysts
+            0850       .FIN-Personal Financial Advisors
+            0860       .FIN-Insurance Underwriters
+            0900       .FIN-Financial Examiners
+            0910       .FIN-Credit Counselors And Loan Officers
+            0930       .FIN-Tax Examiners And Collectors, And Revenue Agents
+            0940       .FIN-Tax Preparers
+            0960       .FIN-Other Financial Specialists
+            1005       .CMM-Computer And Information Research Scientists
+            1006       .CMM-Computer Systems Analysts
+            1007       .CMM-Information Security Analysts
+            1010       .CMM-Computer Programmers
+            1021       .CMM-Software Developers
+            1022       .CMM-Software Quality Assurance Analysts and Testers
+            1031       .CMM-Web Developers
+            1032       .CMM-Web And Digital Interface Designers
+            1050       .CMM-Computer Support Specialists
+            1065       .CMM-Database Administrators and Architects
+            1105       .CMM-Network And Computer Systems Administrators
+            1106       .CMM-Computer Network Architects
+            1108       .CMM-Computer Occupations, All Other
+            1200       .CMM-Actuaries
+            1220       .CMM-Operations Research Analysts
+            1240       .CMM-Other Mathematical Science Occupations
+            1305       .ENG-Architects, Except Landscape And Naval
+            1306       .ENG-Landscape Architects
+            1310       .ENG-Surveyors, Cartographers, And Photogrammetrists
+            1320       .ENG-Aerospace Engineers
+            1340       .ENG-Biomedical And Agricultural Engineers
+            1350       .ENG-Chemical Engineers
+            1360       .ENG-Civil Engineers
+            1400       .ENG-Computer Hardware Engineers
+            1410       .ENG-Electrical And Electronics Engineers
+            1420       .ENG-Environmental Engineers
+            1430       .ENG-Industrial Engineers, Including Health And Safety
+            1440       .ENG-Marine Engineers And Naval Architects
+            1450       .ENG-Materials Engineers
+            1460       .ENG-Mechanical Engineers
+            1520       .ENG-Petroleum, Mining And Geological Engineers, Including Mining Safety Engineers
+            1530       .ENG-Other Engineers
+            1541       .ENG-Architectural And Civil Drafters
+            1545       .ENG-Other Drafters
+            1551       .ENG-Electrical And Electronic Engineering Technologists And Technicians
+            1555       .ENG-Other Engineering Technologists And Technicians, Except Drafters
+            1560       .ENG-Surveying And Mapping Technicians
+            1600       .SCI-Agricultural And Food Scientists
+            1610       .SCI-Biological Scientists
+            1640       .SCI-Conservation Scientists And Foresters
+            1650       .SCI-Other Life Scientists
+            1700       .SCI-Astronomers And Physicists
+            1710       .SCI-Atmospheric And Space Scientists
+            1720       .SCI-Chemists And Materials Scientists
+            1745       .SCI-Environmental Scientists And Specialists, Including Health
+            1750       .SCI-Geoscientists And Hydrologists, Except Geographers
+            1760       .SCI-Physical Scientists, All Other
+            1800       .SCI-Economists
+            1821       .SCI-Clinical And Counseling Psychologists
+            1822       .SCI-School Psychologists
+            1825       .SCI-Other Psychologists
+            1840       .SCI-Urban And Regional Planners
+            1860       .SCI-Other Social Scientists
+            1900       .SCI-Agricultural And Food Science Technicians
+            1910       .SCI-Biological Technicians
+            1920       .SCI-Chemical Technicians
+            1935       .SCI-Environmental Science and Geoscience Technicians, And Nuclear Technicians
+            1970       .SCI-Other Life, Physical, And Social Science Technicians
+            1980       .SCI-Occupational Health And Safety Specialists and Technicians
+            2001       .CMS-Substance Abuse And Behavioral Disorder Counselors
+            2002       .CMS-Educational, Guidance, And Career Counselors And Advisors
+            2003       .CMS-Marriage And Family Therapists
+            2004       .CMS-Mental Health Counselors
+            2005       .CMS-Rehabilitation Counselors
+            2006       .CMS-Counselors, All Other
+            2011       .CMS-Child, Family, And School Social Workers
+            2012       .CMS-Healthcare Social Workers
+            2013       .CMS-Mental Health And Substance Abuse Social Workers
+            2014       .CMS-Social Workers, All Other
+            2015       .CMS-Probation Officers And Correctional Treatment Specialists
+            2016       .CMS-Social And Human Service Assistants
+            2025       .CMS-Other Community and Social Service Specialists
+            2040       .CMS-Clergy
+            2050       .CMS-Directors, Religious Activities And Education
+            2060       .CMS-Religious Workers, All Other
+            2100       .LGL-Lawyers, And Judges, Magistrates, And Other Judicial Workers
+            2105       .LGL-Judicial Law Clerks
+            2145       .LGL-Paralegals And Legal Assistants
+            2170       .LGL-Title Examiners, Abstractors, and Searchers
+            2180       .LGL-Legal Support Workers, All Other
+            2205       .EDU-Postsecondary Teachers
+            2300       .EDU-Preschool And Kindergarten Teachers
+            2310       .EDU-Elementary And Middle School Teachers
+            2320       .EDU-Secondary School Teachers
+            2330       .EDU-Special Education Teachers
+            2350       .EDU-Tutors
+            2360       .EDU-Other Teachers and Instructors
+            2400       .EDU-Archivists, Curators, And Museum Technicians
+            2435       .EDU-Librarians And Media Collections Specialists
+            2440       .EDU-Library Technicians
+            2545       .EDU-Teaching Assistants
+            2555       .EDU-Other Educational Instruction and Library Workers
+            2600       .ENT-Artists And Related Workers
+            2631       .ENT-Commercial And Industrial Designers
+            2632       .ENT-Fashion Designers
+            2633       .ENT-Floral Designers
+            2634       .ENT-Graphic Designers
+            2635       .ENT-Interior Designers
+            2636       .ENT-Merchandise Displayers And Window Trimmers
+            2640       .ENT-Other Designers
+            2700       .ENT-Actors
+            2710       .ENT-Producers And Directors
+            2721       .ENT-Athletes and Sports Competitors
+            2722       .ENT-Coaches and Scouts
+            2723       .ENT-Umpires, Referees, And Other Sports Officials
+            2740       .ENT-Dancers And Choreographers
+            2751       .ENT-Music Directors and Composers
+            2752       .ENT-Musicians and Singers
+            2755       .ENT-Disc Jockeys, Except Radio
+            2770       .ENT-Entertainers And Performers, Sports and Related Workers, All Other
+            2805       .ENT-Broadcast Announcers And Radio Disc Jockeys
+            2810       .ENT-News Analysts, Reporters, And Journalists
+            2825       .ENT-Public Relations Specialists
+            2830       .ENT-Editors
+            2840       .ENT-Technical Writers
+            2850       .ENT-Writers And Authors
+            2861       .ENT-Interpreters and Translators
+            2862       .ENT-Court Reporters and Simultaneous Captioners
+            2865       .ENT-Media And Communication Workers, All Other
+            2905       .ENT-Other Media And Communication Equipment Workers
+            2910       .ENT-Photographers
+            2920       .ENT-Television, Video, And Film Camera Operators And Editors
+            3000       .MED-Chiropractors
+            3010       .MED-Dentists
+            3030       .MED-Dietitians And Nutritionists
+            3040       .MED-Optometrists
+            3050       .MED-Pharmacists
+            3090       .MED-Physicians
+            3100       .MED-Surgeons
+            3110       .MED-Physician Assistants
+            3120       .MED-Podiatrists
+            3140       .MED-Audiologists
+            3150       .MED-Occupational Therapists
+            3160       .MED-Physical Therapists
+            3200       .MED-Radiation Therapists
+            3210       .MED-Recreational Therapists
+            3220       .MED-Respiratory Therapists
+            3230       .MED-Speech-Language Pathologists
+            3245       .MED-Other Therapists
+            3250       .MED-Veterinarians
+            3255       .MED-Registered Nurses
+            3256       .MED-Nurse Anesthetists
+            3258       .MED-Nurse Practitioners, And Nurse Midwives
+            3261       .MED-Acupuncturists
+            3270       .MED-Healthcare Diagnosing Or Treating Practitioners, All Other
+            3300       .MED-Clinical Laboratory Technologists And Technicians
+            3310       .MED-Dental Hygienists
+            3321       .MED-Cardiovascular Technologists and Technicians
+            3322       .MED-Diagnostic Medical Sonographers
+            3323       .MED-Radiologic Technologists And Technicians
+            3324       .MED-Magnetic Resonance Imaging Technologists
+            3330       .MED-Nuclear Medicine Technologists and Medical Dosimetrists
+            3401       .MED-Emergency Medical Technicians
+            3402       .MED-Paramedics
+            3421       .MED-Pharmacy Technicians
+            3422       .MED-Psychiatric Technicians
+            3423       .MED-Surgical Technologists
+            3424       .MED-Veterinary Technologists and Technicians
+            3430       .MED-Dietetic Technicians And Ophthalmic Medical Technicians
+            3500       .MED-Licensed Practical And Licensed Vocational Nurses
+            3515       .MED-Medical Records Specialists
+            3520       .MED-Opticians, Dispensing
+            3545       .MED-Miscellaneous Health Technologists and Technicians
+            3550       .MED-Other Healthcare Practitioners and Technical Occupations
+            3601       .HLS-Home Health Aides
+            3602       .HLS-Personal Care Aides
+            3603       .HLS-Nursing Assistants
+            3605       .HLS-Orderlies and Psychiatric Aides
+            3610       .HLS-Occupational Therapy Assistants And Aides
+            3620       .HLS-Physical Therapist Assistants And Aides
+            3630       .HLS-Massage Therapists
+            3640       .HLS-Dental Assistants
+            3645       .HLS-Medical Assistants
+            3646       .HLS-Medical Transcriptionists
+            3647       .HLS-Pharmacy Aides
+            3648       .HLS-Veterinary Assistants And Laboratory Animal Caretakers
+            3649       .HLS-Phlebotomists
+            3655       .HLS-Other Healthcare Support Workers
+            3700       .PRT-First-Line Supervisors Of Correctional Officers
+            3710       .PRT-First-Line Supervisors Of Police And Detectives
+            3720       .PRT-First-Line Supervisors Of Firefighting And Prevention Workers
+            3725       .PRT-Miscellaneous First-Line Supervisors, Protective Service Workers
+            3740       .PRT-Firefighters
+            3750       .PRT-Fire Inspectors
+            3801       .PRT-Bailiffs
+            3802       .PRT-Correctional Officers and Jailers
+            3820       .PRT-Detectives And Criminal Investigators
+            3840       .PRT-Fish And Game Wardens And Parking Enforcement Officers
+            3870       .PRT-Police Officers
+            3900       .PRT-Animal Control Workers
+            3910       .PRT-Private Detectives And Investigators
+            3930       .PRT-Security Guards And Gambling Surveillance Officers
+            3940       .PRT-Crossing Guards And Flaggers
+            3945       .PRT-Transportation Security Screeners
+            3946       .PRT-School Bus Monitors
+            3960       .PRT-Other Protective Service Workers
+            4000       .EAT-Chefs And Head Cooks
+            4010       .EAT-First-Line Supervisors Of Food Preparation And Serving Workers
+            4020       .EAT-Cooks
+            4030       .EAT-Food Preparation Workers
+            4040       .EAT-Bartenders
+            4055       .EAT-Fast Food And Counter Workers
+            4110       .EAT-Waiters And Waitresses
+            4120       .EAT-Food Servers, Nonrestaurant
+            4130       .EAT-Dining Room And Cafeteria Attendants And Bartender Helpers
+            4140       .EAT-Dishwashers
+            4150       .EAT-Hosts And Hostesses, Restaurant, Lounge, And Coffee Shop
+            4160       .EAT-Food Preparation and Serving Related Workers, All Other
+            4200       .CLN-First-Line Supervisors Of Housekeeping And Janitorial Workers
+            4210       .CLN-First-Line Supervisors Of Landscaping, Lawn Service, And Groundskeeping Workers
+            4220       .CLN-Janitors And Building Cleaners
+            4230       .CLN-Maids And Housekeeping Cleaners
+            4240       .CLN-Pest Control Workers
+            4251       .CLN-Landscaping And Groundskeeping Workers
+            4252       .CLN-Tree Trimmers and Pruners
+            4255       .CLN-Other Grounds Maintenance Workers
+            4330       .PRS-Supervisors Of Personal Care And Service Workers
+            4340       .PRS-Animal Trainers
+            4350       .PRS-Animal Caretakers
+            4400       .PRS-Gambling Services Workers
+            4420       .PRS-Ushers, Lobby Attendants, And Ticket Takers
+            4435       .PRS-Other Entertainment Attendants And Related Workers
+            4461       .PRS-Embalmers, Crematory Operators And Funeral Attendants
+            4465       .PRS-Morticians, Undertakers, And Funeral Arrangers
+            4500       .PRS-Barbers
+            4510       .PRS-Hairdressers, Hairstylists, And Cosmetologists
+            4521       .PRS-Manicurists And Pedicurists
+            4522       .PRS-Skincare Specialists
+            4525       .PRS-Other Personal Appearance Workers
+            4530       .PRS-Baggage Porters, Bellhops, And Concierges
+            4540       .PRS-Tour And Travel Guides
+            4600       .PRS-Childcare Workers
+            4621       .PRS-Exercise Trainers And Group Fitness Instructors
+            4622       .PRS-Recreation Workers
+            4640       .PRS-Residential Advisors
+            4655       .PRS-Personal Care and Service Workers, All Other
+            4700       .SAL-First-Line Supervisors Of Retail Sales Workers
+            4710       .SAL-First-Line Supervisors Of Non-Retail Sales Workers
+            4720       .SAL-Cashiers
+            4740       .SAL-Counter And Rental Clerks
+            4750       .SAL-Parts Salespersons
+            4760       .SAL-Retail Salespersons
+            4800       .SAL-Advertising Sales Agents
+            4810       .SAL-Insurance Sales Agents
+            4820       .SAL-Securities, Commodities, And Financial Services Sales Agents
+            4830       .SAL-Travel Agents
+            4840       .SAL-Sales Representatives Of Services, Except Advertising, Insurance, Financial Services, And Travel
+            4850       .SAL-Sales Representatives, Wholesale And Manufacturing
+            4900       .SAL-Models, Demonstrators, And Product Promoters
+            4920       .SAL-Real Estate Brokers And Sales Agents
+            4930       .SAL-Sales Engineers
+            4940       .SAL-Telemarketers
+            4950       .SAL-Door-To-Door Sales Workers, News And Street Vendors, And Related Workers
+            4965       .SAL-Sales And Related Workers, All Other
+            5000       .OFF-First-Line Supervisors Of Office And Administrative Support Workers
+            5010       .OFF-Switchboard Operators, Including Answering Service
+            5020       .OFF-Telephone Operators
+            5040       .OFF-Communications Equipment Operators, All Other
+            5100       .OFF-Bill And Account Collectors
+            5110       .OFF-Billing And Posting Clerks
+            5120       .OFF-Bookkeeping, Accounting, And Auditing Clerks
+            5140       .OFF-Payroll And Timekeeping Clerks
+            5150       .OFF-Procurement Clerks
+            5160       .OFF-Tellers
+            5165       .OFF-Other Financial Clerks
+            5220       .OFF-Court, Municipal, And License Clerks
+            5230       .OFF-Credit Authorizers, Checkers, And Clerks
+            5240       .OFF-Customer Service Representatives
+            5250       .OFF-Eligibility Interviewers, Government Programs
+            5260       .OFF-File Clerks
+            5300       .OFF-Hotel, Motel, And Resort Desk Clerks
+            5310       .OFF-Interviewers, Except Eligibility And Loan
+            5320       .OFF-Library Assistants, Clerical
+            5330       .OFF-Loan Interviewers And Clerks
+            5340       .OFF-New Accounts Clerks
+            5350       .OFF-Correspondence Clerks And Order Clerks
+            5360       .OFF-Human Resources Assistants, Except Payroll And Timekeeping
+            5400       .OFF-Receptionists And Information Clerks
+            5410       .OFF-Reservation And Transportation Ticket Agents And Travel Clerks
+            5420       .OFF-Other Information And Records Clerks
+            5500       .OFF-Cargo And Freight Agents
+            5510       .OFF-Couriers And Messengers
+            5521       .OFF-Public Safety Telecommunicators
+            5522       .OFF-Dispatchers, Except Police, Fire, And Ambulance
+            5530       .OFF-Meter Readers, Utilities
+            5540       .OFF-Postal Service Clerks
+            5550       .OFF-Postal Service Mail Carriers
+            5560       .OFF-Postal Service Mail Sorters, Processors, And Processing Machine Operators
+            5600       .OFF-Production, Planning, And Expediting Clerks
+            5610       .OFF-Shipping, Receiving, And Inventory Clerks
+            5630       .OFF-Weighers, Measurers, Checkers, And Samplers, Recordkeeping
+            5710       .OFF-Executive Secretaries And Executive Administrative Assistants
+            5720       .OFF-Legal Secretaries and Administrative Assistants
+            5730       .OFF-Medical Secretaries and Administrative Assistants
+            5740       .OFF-Secretaries And Administrative Assistants, Except Legal, Medical, And Executive
+            5810       .OFF-Data Entry Keyers
+            5820       .OFF-Word Processors And Typists
+            5840       .OFF-Insurance Claims And Policy Processing Clerks
+            5850       .OFF-Mail Clerks And Mail Machine Operators, Except Postal Service
+            5860       .OFF-Office Clerks, General
+            5900       .OFF-Office Machine Operators, Except Computer
+            5910       .OFF-Proofreaders And Copy Markers
+            5920       .OFF-Statistical Assistants
+            5940       .OFF-Other Office And Administrative Support Workers
+            6005       .FFF-First-Line Supervisors Of Farming, Fishing, And Forestry Workers
+            6010       .FFF-Agricultural Inspectors
+            6040       .FFF-Graders And Sorters, Agricultural Products
+            6050       .FFF-Other Agricultural Workers
+            6115       .FFF-Fishing And Hunting Workers
+            6120       .FFF-Forest And Conservation Workers
+            6130       .FFF-Logging Workers
+            6200       .CON-First-Line Supervisors Of Construction Trades And Extraction Workers
+            6210       .CON-Boilermakers
+            6220       .CON-Brickmasons, Blockmasons, Stonemasons, And Reinforcing Iron And Rebar Workers
+            6230       .CON-Carpenters
+            6240       .CON-Carpet, Floor, And Tile Installers And Finishers
+            6250       .CON-Cement Masons, Concrete Finishers, And Terrazzo Workers
+            6260       .CON-Construction Laborers
+            6305       .CON-Construction Equipment Operators
+            6330       .CON-Drywall Installers, Ceiling Tile Installers, And Tapers
+            6355       .CON-Electricians
+            6360       .CON-Glaziers
+            6400       .CON-Insulation Workers
+            6410       .CON-Painters and Paperhangers
+            6441       .CON-Pipelayers
+            6442       .CON-Plumbers, Pipefitters, And Steamfitters
+            6460       .CON-Plasterers And Stucco Masons
+            6515       .CON-Roofers
+            6520       .CON-Sheet Metal Workers
+            6530       .CON-Structural Iron And Steel Workers
+            6540       .CON-Solar Photovoltaic Installers
+            6600       .CON-Helpers, Construction Trades
+            6660       .CON-Construction And Building Inspectors
+            6700       .CON-Elevator And Escalator Installers And Repairers
+            6710       .CON-Fence Erectors
+            6720       .CON-Hazardous Materials Removal Workers
+            6730       .CON-Highway Maintenance Workers
+            6740       .CON-Rail-Track Laying And Maintenance Equipment Operators
+            6765       .CON-Other Construction And Related Workers
+            6800       .EXT-Derrick, Rotary Drill, And Service Unit Operators, And Roustabouts, Oil And Gas
+            6825       .EXT-Surface Mining Machine Operators And Earth Drillers
+            6835       .EXT-Explosives Workers, Ordnance Handling Experts, and Blasters
+            6850       .EXT-Underground Mining Machine Operators
+            6950       .EXT-Other Extraction Workers
+            7000       .RPR-First-Line Supervisors Of Mechanics, Installers, And Repairers
+            7010       .RPR-Computer, Automated Teller, And Office Machine Repairers
+            7020       .RPR-Radio And Telecommunications Equipment Installers And Repairers
+            7030       .RPR-Avionics Technicians
+            7040       .RPR-Electric Motor, Power Tool, And Related Repairers
+            7100       .RPR-Other Electrical And Electronic Equipment Mechanics, Installers, And Repairers
+            7120       .RPR-Audiovisual Equipment Installers And Repairers
+            7130       .RPR-Security And Fire Alarm Systems Installers
+            7140       .RPR-Aircraft Mechanics And Service Technicians
+            7150       .RPR-Automotive Body And Related Repairers
+            7160       .RPR-Automotive Glass Installers And Repairers
+            7200       .RPR-Automotive Service Technicians And Mechanics
+            7210       .RPR-Bus And Truck Mechanics And Diesel Engine Specialists
+            7220       .RPR-Heavy Vehicle And Mobile Equipment Service Technicians And Mechanics
+            7240       .RPR-Small Engine Mechanics
+            7260       .RPR-Miscellaneous Vehicle And Mobile Equipment Mechanics, Installers, And Repairers
+            7300       .RPR-Control And Valve Installers And Repairers
+            7315       .RPR-Heating, Air Conditioning, And Refrigeration Mechanics And Installers
+            7320       .RPR-Home Appliance Repairers
+            7330       .RPR-Industrial And Refractory Machinery Mechanics
+            7340       .RPR-Maintenance And Repair Workers, General
+            7350       .RPR-Maintenance Workers, Machinery
+            7360       .RPR-Millwrights
+            7410       .RPR-Electrical Power-Line Installers And Repairers
+            7420       .RPR-Telecommunications Line Installers And Repairers
+            7430       .RPR-Precision Instrument And Equipment Repairers
+            7510       .RPR-Coin, Vending, And Amusement Machine Servicers And Repairers
+            7540       .RPR-Locksmiths And Safe Repairers
+            7560       .RPR-Riggers
+            7610       .RPR-Helpers--Installation, Maintenance, And Repair Workers
+            7640       .RPR-Other Installation, Maintenance, And Repair Workers
+            7700       .PRD-First-Line Supervisors Of Production And Operating Workers
+            7720       .PRD-Electrical, Electronics, And Electromechanical Assemblers
+            7730       .PRD-Engine And Other Machine Assemblers
+            7740       .PRD-Structural Metal Fabricators And Fitters
+            7750       .PRD-Other Assemblers And Fabricators
+            7800       .PRD-Bakers
+            7810       .PRD-Butchers And Other Meat, Poultry, And Fish Processing Workers
+            7830       .PRD-Food And Tobacco Roasting, Baking, And Drying Machine Operators And Tenders
+            7840       .PRD-Food Batchmakers
+            7850       .PRD-Food Cooking Machine Operators And Tenders
+            7855       .PRD-Food Processing Workers, All Other
+            7905       .PRD-Computer Numerically Controlled Tool Operators And Programmers
+            7925       .PRD-Forming Machine Setters, Operators, And Tenders, Metal And Plastic
+            7950       .PRD-Cutting, Punching, And Press Machine Setters, Operators, And Tenders, Metal And Plastic
+            8000       .PRD-Grinding, Lapping, Polishing, And Buffing Machine Tool Setters, Operators, And Tenders, Metal And Plastic
+            8025       .PRD-Other Machine Tool Setters, Operators, And Tenders, Metal and Plastic
+            8030       .PRD-Machinists
+            8040       .PRD-Metal Furnace Operators, Tenders, Pourers, And Casters
+            8100       .PRD-Model Makers, Patternmakers, And Molding Machine Setters, Metal And Plastic
+            8130       .PRD-Tool And Die Makers
+            8140       .PRD-Welding, Soldering, And Brazing Workers
+            8225       .PRD-Other Metal Workers And Plastic Workers
+            8250       .PRD-Prepress Technicians And Workers
+            8255       .PRD-Printing Press Operators
+            8256       .PRD-Print Binding And Finishing Workers
+            8300       .PRD-Laundry And Dry-Cleaning Workers
+            8310       .PRD-Pressers, Textile, Garment, And Related Materials
+            8320       .PRD-Sewing Machine Operators
+            8335       .PRD-Shoe And Leather Workers
+            8350       .PRD-Tailors, Dressmakers, And Sewers
+            8365       .PRD-Textile Machine Setters, Operators, And Tenders
+            8450       .PRD-Upholsterers
+            8465       .PRD-Other Textile, Apparel, And Furnishings Workers
+            8500       .PRD-Cabinetmakers And Bench Carpenters
+            8510       .PRD-Furniture Finishers
+            8530       .PRD-Sawing Machine Setters, Operators, And Tenders, Wood
+            8540       .PRD-Woodworking Machine Setters, Operators, And Tenders, Except Sawing
+            8555       .PRD-Other Woodworkers
+            8600       .PRD-Power Plant Operators, Distributors, And Dispatchers
+            8610       .PRD-Stationary Engineers And Boiler Operators
+            8620       .PRD-Water And Wastewater Treatment Plant And System Operators
+            8630       .PRD-Miscellaneous Plant And System Operators
+            8640       .PRD-Chemical Processing Machine Setters, Operators, And Tenders
+            8650       .PRD-Crushing, Grinding, Polishing, Mixing, And Blending Workers
+            8710       .PRD-Cutting Workers
+            8720       .PRD-Extruding, Forming, Pressing, And Compacting Machine Setters, Operators, And Tenders
+            8730       .PRD-Furnace, Kiln, Oven, Drier, And Kettle Operators And Tenders
+            8740       .PRD-Inspectors, Testers, Sorters, Samplers, And Weighers
+            8750       .PRD-Jewelers And Precious Stone And Metal Workers
+            8760       .PRD-Dental And Ophthalmic Laboratory Technicians And Medical Appliance Technicians
+            8800       .PRD-Packaging And Filling Machine Operators And Tenders
+            8810       .PRD-Painting Workers
+            8830       .PRD-Photographic Process Workers And Processing Machine Operators
+            8850       .PRD-Adhesive Bonding Machine Operators And Tenders
+            8910       .PRD-Etchers And Engravers
+            8920       .PRD-Molders, Shapers, And Casters, Except Metal And Plastic
+            8930       .PRD-Paper Goods Machine Setters, Operators, And Tenders
+            8940       .PRD-Tire Builders
+            8950       .PRD-Helpers--Production Workers
+            8990       .PRD-Miscellaneous Production Workers, Including Equipment Operators And Tenders
+            9005       .TRN-Supervisors Of Transportation And Material Moving Workers
+            9030       .TRN-Aircraft Pilots And Flight Engineers
+            9040       .TRN-Air Traffic Controllers And Airfield Operations Specialists
+            9050       .TRN-Flight Attendants
+            9110       .TRN-Ambulance Drivers And Attendants, Except Emergency Medical Technicians
+            9121       .TRN-Bus Drivers, School
+            9122       .TRN-Bus Drivers, Transit And Intercity
+            9130       .TRN-Driver/Sales Workers And Truck Drivers
+            9141       .TRN-Shuttle Drivers And Chauffeurs
+            9142       .TRN-Taxi Drivers
+            9150       .TRN-Motor Vehicle Operators, All Other
+            9210       .TRN-Locomotive Engineers And Operators
+            9240       .TRN-Railroad Conductors And Yardmasters
+            9265       .TRN-Other Rail Transportation Workers
+            9300       .TRN-Sailors And Marine Oilers, And Ship Engineers
+            9310       .TRN-Ship And Boat Captains And Operators
+            9350       .TRN-Parking Attendants
+            9365       .TRN-Transportation Service Attendants
+            9410       .TRN-Transportation Inspectors
+            9415       .TRN-Passenger Attendants
+            9430       .TRN-Other Transportation Workers
+            9510       .TRN-Crane And Tower Operators
+            9570       .TRN-Conveyor, Dredge, And Hoist and Winch Operators
+            9600       .TRN-Industrial Truck And Tractor Operators
+            9610       .TRN-Cleaners Of Vehicles And Equipment
+            9620       .TRN-Laborers And Freight, Stock, And Material Movers, Hand
+            9630       .TRN-Machine Feeders And Offbearers
+            9640       .TRN-Packers And Packagers, Hand
+            9645       .TRN-Stockers And Order Fillers
+            9650       .TRN-Pumping Station Operators
+            9720       .TRN-Refuse And Recyclable Material Collectors
+            9760       .TRN-Other Material Moving Workers
+            9800       .MIL-Military Officer Special And Tactical Operations Leaders
+            9810       .MIL-First-Line Enlisted Military Supervisors
+            9825       .MIL-Military Enlisted Tactical Operations And Air/Weapons Specialists And Crew Members
+            9830       .MIL-Military, Rank Not Specified
+            9920       .Unemployed, With No Work Experience In The Last 5 Years Or Earlier Or Never Worked
+
+PAOC        Character   1
+Presence and age of own children
+            b    .N/A (male/female under 16 years old/GQ)
+            1    .Females with own children under 6 years only
+            2    .Females with own children 6 to 17 years only
+            3    .Females with own children under 6 years and 6 to 17 years
+            4    .Females with no own children
+
+PUBCOV      Character   1
+Public health coverage recode
+            1    .With public health coverage
+            2    .Without public health coverage
+
+DEAR        Character   1
+Hearing difficulty
+            1    .Yes
+            2    .No
+
+JWAP        Character   3
+Time of arrival at work - hour and minute
+            bbb      .N/A (not a worker; worker who worked at home)
+            001      .12:00 a.m. to 12:04 a.m.
+            002      .12:05 a.m. to 12:09 a.m.
+            003      .12:10 a.m. to 12:14 a.m.
+            004      .12:15 a.m. to 12:19 a.m.
+            005      .12:20 a.m. to 12:24 a.m.
+            006      .12:25 a.m. to 12:29 a.m.
+            007      .12:30 a.m. to 12:39 a.m.
+            008      .12:40 a.m. to 12:44 a.m.
+            009      .12:45 a.m. to 12:49 a.m.
+            010      .12:50 a.m. to 12:59 a.m.
+            011      .1:00 a.m. to 1:04 a.m.
+            012      .1:05 a.m. to 1:09 a.m.
+            013      .1:10 a.m. to 1:14 a.m.
+            014      .1:15 a.m. to 1:19 a.m.
+            015      .1:20 a.m. to 1:24 a.m.
+            016      .1:25 a.m. to 1:29 a.m.
+            017      .1:30 a.m. to 1:34 a.m.
+            018      .1:35 a.m. to 1:39 a.m.
+            019      .1:40 a.m. to 1:44 a.m.
+            020      .1:45 a.m. to 1:49 a.m.
+            021      .1:50 a.m. to 1:59 a.m.
+            022      .2:00 a.m. to 2:04 a.m.
+            023      .2:05 a.m. to 2:09 a.m.
+            024      .2:10 a.m. to 2:14 a.m.
+            025      .2:15 a.m. to 2:19 a.m.
+            026      .2:20 a.m. to 2:24 a.m.
+            027      .2:25 a.m. to 2:29 a.m.
+            028      .2:30 a.m. to 2:34 a.m.
+            029      .2:35 a.m. to 2:39 a.m.
+            030      .2:40 a.m. to 2:44 a.m.
+            031      .2:45 a.m. to 2:49 a.m.
+            032      .2:50 a.m. to 2:54 a.m.
+            033      .2:55 a.m. to 2:59 a.m.
+            034      .3:00 a.m. to 3:04 a.m.
+            035      .3:05 a.m. to 3:09 a.m.
+            036      .3:10 a.m. to 3:14 a.m.
+            037      .3:15 a.m. to 3:19 a.m.
+            038      .3:20 a.m. to 3:24 a.m.
+            039      .3:25 a.m. to 3:29 a.m.
+            040      .3:30 a.m. to 3:34 a.m.
+            041      .3:35 a.m. to 3:39 a.m.
+            042      .3:40 a.m. to 3:44 a.m.
+            043      .3:45 a.m. to 3:49 a.m.
+            044      .3:50 a.m. to 3:54 a.m.
+            045      .3:55 a.m. to 3:59 a.m.
+            046      .4:00 a.m. to 4:04 a.m.
+            047      .4:05 a.m. to 4:09 a.m.
+            048      .4:10 a.m. to 4:14 a.m.
+            049      .4:15 a.m. to 4:19 a.m.
+            050      .4:20 a.m. to 4:24 a.m.
+            051      .4:25 a.m. to 4:29 a.m.
+            052      .4:30 a.m. to 4:34 a.m.
+            053      .4:35 a.m. to 4:39 a.m.
+            054      .4:40 a.m. to 4:44 a.m.
+            055      .4:45 a.m. to 4:49 a.m.
+            056      .4:50 a.m. to 4:54 a.m.
+            057      .4:55 a.m. to 4:59 a.m.
+            058      .5:00 a.m. to 5:04 a.m.
+            059      .5:05 a.m. to 5:09 a.m.
+            060      .5:10 a.m. to 5:14 a.m.
+            061      .5:15 a.m. to 5:19 a.m.
+            062      .5:20 a.m. to 5:24 a.m.
+            063      .5:25 a.m. to 5:29 a.m.
+            064      .5:30 a.m. to 5:34 a.m.
+            065      .5:35 a.m. to 5:39 a.m.
+            066      .5:40 a.m. to 5:44 a.m.
+            067      .5:45 a.m. to 5:49 a.m.
+            068      .5:50 a.m. to 5:54 a.m.
+            069      .5:55 a.m. to 5:59 a.m.
+            070      .6:00 a.m. to 6:04 a.m.
+            071      .6:05 a.m. to 6:09 a.m.
+            072      .6:10 a.m. to 6:14 a.m.
+            073      .6:15 a.m. to 6:19 a.m.
+            074      .6:20 a.m. to 6:24 a.m.
+            075      .6:25 a.m. to 6:29 a.m.
+            076      .6:30 a.m. to 6:34 a.m.
+            077      .6:35 a.m. to 6:39 a.m.
+            078      .6:40 a.m. to 6:44 a.m.
+            079      .6:45 a.m. to 6:49 a.m.
+            080      .6:50 a.m. to 6:54 a.m.
+            081      .6:55 a.m. to 6:59 a.m.
+            082      .7:00 a.m. to 7:04 a.m.
+            083      .7:05 a.m. to 7:09 a.m.
+            084      .7:10 a.m. to 7:14 a.m.
+            085      .7:15 a.m. to 7:19 a.m.
+            086      .7:20 a.m. to 7:24 a.m.
+            087      .7:25 a.m. to 7:29 a.m.
+            088      .7:30 a.m. to 7:34 a.m.
+            089      .7:35 a.m. to 7:39 a.m.
+            090      .7:40 a.m. to 7:44 a.m.
+            091      .7:45 a.m. to 7:49 a.m.
+            092      .7:50 a.m. to 7:54 a.m.
+            093      .7:55 a.m. to 7:59 a.m.
+            094      .8:00 a.m. to 8:04 a.m.
+            095      .8:05 a.m. to 8:09 a.m.
+            096      .8:10 a.m. to 8:14 a.m.
+            097      .8:15 a.m. to 8:19 a.m.
+            098      .8:20 a.m. to 8:24 a.m.
+            099      .8:25 a.m. to 8:29 a.m.
+            100      .8:30 a.m. to 8:34 a.m.
+            101      .8:35 a.m. to 8:39 a.m.
+            102      .8:40 a.m. to 8:44 a.m.
+            103      .8:45 a.m. to 8:49 a.m.
+            104      .8:50 a.m. to 8:54 a.m.
+            105      .8:55 a.m. to 8:59 a.m.
+            106      .9:00 a.m. to 9:04 a.m.
+            107      .9:05 a.m. to 9:09 a.m.
+            108      .9:10 a.m. to 9:14 a.m.
+            109      .9:15 a.m. to 9:19 a.m.
+            110      .9:20 a.m. to 9:24 a.m.
+            111      .9:25 a.m. to 9:29 a.m.
+            112      .9:30 a.m. to 9:34 a.m.
+            113      .9:35 a.m. to 9:39 a.m.
+            114      .9:40 a.m. to 9:44 a.m.
+            115      .9:45 a.m. to 9:49 a.m.
+            116      .9:50 a.m. to 9:54 a.m.
+            117      .9:55 a.m. to 9:59 a.m.
+            118      .10:00 a.m. to 10:04 a.m.
+            119      .10:05 a.m. to 10:09 a.m.
+            120      .10:10 a.m. to 10:14 a.m.
+            121      .10:15 a.m. to 10:19 a.m.
+            122      .10:20 a.m. to 10:24 a.m.
+            123      .10:25 a.m. to 10:29 a.m.
+            124      .10:30 a.m. to 10:34 a.m.
+            125      .10:35 a.m. to 10:39 a.m.
+            126      .10:40 a.m. to 10:44 a.m.
+            127      .10:45 a.m. to 10:49 a.m.
+            128      .10:50 a.m. to 10:54 a.m.
+            129      .10:55 a.m. to 10:59 a.m.
+            130      .11:00 a.m. to 11:04 a.m.
+            131      .11:05 a.m. to 11:09 a.m.
+            132      .11:10 a.m. to 11:14 a.m.
+            133      .11:15 a.m. to 11:19 a.m.
+            134      .11:20 a.m. to 11:24 a.m.
+            135      .11:25 a.m. to 11:29 a.m.
+            136      .11:30 a.m. to 11:34 a.m.
+            137      .11:35 a.m. to 11:39 a.m.
+            138      .11:40 a.m. to 11:44 a.m.
+            139      .11:45 a.m. to 11:49 a.m.
+            140      .11:50 a.m. to 11:54 a.m.
+            141      .11:55 a.m. to 11:59 a.m.
+            142      .12:00 p.m. to 12:04 p.m.
+            143      .12:05 p.m. to 12:09 p.m.
+            144      .12:10 p.m. to 12:14 p.m.
+            145      .12:15 p.m. to 12:19 p.m.
+            146      .12:20 p.m. to 12:24 p.m.
+            147      .12:25 p.m. to 12:29 p.m.
+            148      .12:30 p.m. to 12:34 p.m.
+            149      .12:35 p.m. to 12:39 p.m.
+            150      .12:40 p.m. to 12:44 p.m.
+            151      .12:45 p.m. to 12:49 p.m.
+            152      .12:50 p.m. to 12:54 p.m.
+            153      .12:55 p.m. to 12:59 p.m.
+            154      .1:00 p.m. to 1:04 p.m.
+            155      .1:05 p.m. to 1:09 p.m.
+            156      .1:10 p.m. to 1:14 p.m.
+            157      .1:15 p.m. to 1:19 p.m.
+            158      .1:20 p.m. to 1:24 p.m.
+            159      .1:25 p.m. to 1:29 p.m.
+            160      .1:30 p.m. to 1:34 p.m.
+            161      .1:35 p.m. to 1:39 p.m.
+            162      .1:40 p.m. to 1:44 p.m.
+            163      .1:45 p.m. to 1:49 p.m.
+            164      .1:50 p.m. to 1:54 p.m.
+            165      .1:55 p.m. to 1:59 p.m.
+            166      .2:00 p.m. to 2:04 p.m.
+            167      .2:05 p.m. to 2:09 p.m.
+            168      .2:10 p.m. to 2:14 p.m.
+            169      .2:15 p.m. to 2:19 p.m.
+            170      .2:20 p.m. to 2:24 p.m.
+            171      .2:25 p.m. to 2:29 p.m.
+            172      .2:30 p.m. to 2:34 p.m.
+            173      .2:35 p.m. to 2:39 p.m.
+            174      .2:40 p.m. to 2:44 p.m.
+            175      .2:45 p.m. to 2:49 p.m.
+            176      .2:50 p.m. to 2:54 p.m.
+            177      .2:55 p.m. to 2:59 p.m.
+            178      .3:00 p.m. to 3:04 p.m.
+            179      .3:05 p.m. to 3:09 p.m.
+            180      .3:10 p.m. to 3:14 p.m.
+            181      .3:15 p.m. to 3:19 p.m.
+            182      .3:20 p.m. to 3:24 p.m.
+            183      .3:25 p.m. to 3:29 p.m.
+            184      .3:30 p.m. to 3:34 p.m.
+            185      .3:35 p.m. to 3:39 p.m.
+            186      .3:40 p.m. to 3:44 p.m.
+            187      .3:45 p.m. to 3:49 p.m.
+            188      .3:50 p.m. to 3:54 p.m.
+            189      .3:55 p.m. to 3:59 p.m.
+            190      .4:00 p.m. to 4:04 p.m.
+            191      .4:05 p.m. to 4:09 p.m.
+            192      .4:10 p.m. to 4:14 p.m.
+            193      .4:15 p.m. to 4:19 p.m.
+            194      .4:20 p.m. to 4:24 p.m.
+            195      .4:25 p.m. to 4:29 p.m.
+            196      .4:30 p.m. to 4:34 p.m.
+            197      .4:35 p.m. to 4:39 p.m.
+            198      .4:40 p.m. to 4:44 p.m.
+            199      .4:45 p.m. to 4:49 p.m.
+            200      .4:50 p.m. to 4:54 p.m.
+            201      .4:55 p.m. to 4:59 p.m.
+            202      .5:00 p.m. to 5:04 p.m.
+            203      .5:05 p.m. to 5:09 p.m.
+            204      .5:10 p.m. to 5:14 p.m.
+            205      .5:15 p.m. to 5:19 p.m.
+            206      .5:20 p.m. to 5:24 p.m.
+            207      .5:25 p.m. to 5:29 p.m.
+            208      .5:30 p.m. to 5:34 p.m.
+            209      .5:35 p.m. to 5:39 p.m.
+            210      .5:40 p.m. to 5:44 p.m.
+            211      .5:45 p.m. to 5:49 p.m.
+            212      .5:50 p.m. to 5:54 p.m.
+            213      .5:55 p.m. to 5:59 p.m.
+            214      .6:00 p.m. to 6:04 p.m.
+            215      .6:05 p.m. to 6:09 p.m.
+            216      .6:10 p.m. to 6:14 p.m.
+            217      .6:15 p.m. to 6:19 p.m.
+            218      .6:20 p.m. to 6:24 p.m.
+            219      .6:25 p.m. to 6:29 p.m.
+            220      .6:30 p.m. to 6:34 p.m.
+            221      .6:35 p.m. to 6:39 p.m.
+            222      .6:40 p.m. to 6:44 p.m.
+            223      .6:45 p.m. to 6:49 p.m.
+            224      .6:50 p.m. to 6:54 p.m.
+            225      .6:55 p.m. to 6:59 p.m.
+            226      .7:00 p.m. to 7:04 p.m.
+            227      .7:05 p.m. to 7:09 p.m.
+            228      .7:10 p.m. to 7:14 p.m.
+            229      .7:15 p.m. to 7:19 p.m.
+            230      .7:20 p.m. to 7:24 p.m.
+            231      .7:25 p.m. to 7:29 p.m.
+            232      .7:30 p.m. to 7:34 p.m.
+            233      .7:35 p.m. to 7:39 p.m.
+            234      .7:40 p.m. to 7:44 p.m.
+            235      .7:45 p.m. to 7:49 p.m.
+            236      .7:50 p.m. to 7:54 p.m.
+            237      .7:55 p.m. to 7:59 p.m.
+            238      .8:00 p.m. to 8:04 p.m.
+            239      .8:05 p.m. to 8:09 p.m.
+            240      .8:10 p.m. to 8:14 p.m.
+            241      .8:15 p.m. to 8:19 p.m.
+            242      .8:20 p.m. to 8:24 p.m.
+            243      .8:25 p.m. to 8:29 p.m.
+            244      .8:30 p.m. to 8:34 p.m.
+            245      .8:35 p.m. to 8:39 p.m.
+            246      .8:40 p.m. to 8:44 p.m.
+            247      .8:45 p.m. to 8:49 p.m.
+            248      .8:50 p.m. to 8:54 p.m.
+            249      .8:55 p.m. to 8:59 p.m.
+            250      .9:00 p.m. to 9:04 p.m.
+            251      .9:05 p.m. to 9:09 p.m.
+            252      .9:10 p.m. to 9:14 p.m.
+            253      .9:15 p.m. to 9:19 p.m.
+            254      .9:20 p.m. to 9:24 p.m.
+            255      .9:25 p.m. to 9:29 p.m.
+            256      .9:30 p.m. to 9:34 p.m.
+            257      .9:35 p.m. to 9:39 p.m.
+            258      .9:40 p.m. to 9:44 p.m.
+            259      .9:45 p.m. to 9:49 p.m.
+            260      .9:50 p.m. to 9:54 p.m.
+            261      .9:55 p.m. to 9:59 p.m.
+            262      .10:00 p.m. to 10:04 p.m.
+            263      .10:05 p.m. to 10:09 p.m.
+            264      .10:10 p.m. to 10:14 p.m.
+            265      .10:15 p.m. to 10:19 p.m.
+            266      .10:20 p.m. to 10:24 p.m.
+            267      .10:25 p.m. to 10:29 p.m.
+            268      .10:30 p.m. to 10:34 p.m.
+            269      .10:35 p.m. to 10:39 p.m.
+            270      .10:40 p.m. to 10:44 p.m.
+            271      .10:45 p.m. to 10:49 p.m.
+            272      .10:50 p.m. to 10:54 p.m.
+            273      .10:55 p.m. to 10:59 p.m.
+            274      .11:00 p.m. to 11:04 p.m.
+            275      .11:05 p.m. to 11:09 p.m.
+            276      .11:10 p.m. to 11:14 p.m.
+            277      .11:15 p.m. to 11:19 p.m.
+            278      .11:20 p.m. to 11:24 p.m.
+            279      .11:25 p.m. to 11:29 p.m.
+            280      .11:30 p.m. to 11:34 p.m.
+            281      .11:35 p.m. to 11:39 p.m.
+            282      .11:40 p.m. to 11:44 p.m.
+            283      .11:45 p.m. to 11:49 p.m.
+            284      .11:50 p.m. to 11:54 p.m.
+            285      .11:55 p.m. to 11:59 p.m.
+
+JWDP        Character   3
+Time of departure for work - hour and minute
+            bbb      .N/A (not a worker; worker who worked at home)
+            001      .12:00 a.m. to 12:29 a.m.
+            002      .12:30 a.m. to 12:59 a.m.
+            003      .1:00 a.m. to 1:29 a.m.
+            004      .1:30 a.m. to 1:59 a.m.
+            005      .2:00 a.m. to 2:29 a.m.
+            006      .2:30 a.m. to 2:59 a.m.
+            007      .3:00 a.m. to 3:09 a.m.
+            008      .3:10 a.m. to 3:19 a.m.
+            009      .3:20 a.m. to 3:29 a.m.
+            010      .3:30 a.m. to 3:39 a.m.
+            011      .3:40 a.m. to 3:49 a.m.
+            012      .3:50 a.m. to 3:59 a.m.
+            013      .4:00 a.m. to 4:09 a.m.
+            014      .4:10 a.m. to 4:19 a.m.
+            015      .4:20 a.m. to 4:29 a.m.
+            016      .4:30 a.m. to 4:39 a.m.
+            017      .4:40 a.m. to 4:49 a.m.
+            018      .4:50 a.m. to 4:59 a.m.
+            019      .5:00 a.m. to 5:04 a.m.
+            020      .5:05 a.m. to 5:09 a.m.
+            021      .5:10 a.m. to 5:14 a.m.
+            022      .5:15 a.m. to 5:19 a.m.
+            023      .5:20 a.m. to 5:24 a.m.
+            024      .5:25 a.m. to 5:29 a.m.
+            025      .5:30 a.m. to 5:34 a.m.
+            026      .5:35 a.m. to 5:39 a.m.
+            027      .5:40 a.m. to 5:44 a.m.
+            028      .5:45 a.m. to 5:49 a.m.
+            029      .5:50 a.m. to 5:54 a.m.
+            030      .5:55 a.m. to 5:59 a.m.
+            031      .6:00 a.m. to 6:04 a.m.
+            032      .6:05 a.m. to 6:09 a.m.
+            033      .6:10 a.m. to 6:14 a.m.
+            034      .6:15 a.m. to 6:19 a.m.
+            035      .6:20 a.m. to 6:24 a.m.
+            036      .6:25 a.m. to 6:29 a.m.
+            037      .6:30 a.m. to 6:34 a.m.
+            038      .6:35 a.m. to 6:39 a.m.
+            039      .6:40 a.m. to 6:44 a.m.
+            040      .6:45 a.m. to 6:49 a.m.
+            041      .6:50 a.m. to 6:54 a.m.
+            042      .6:55 a.m. to 6:59 a.m.
+            043      .7:00 a.m. to 7:04 a.m.
+            044      .7:05 a.m. to 7:09 a.m.
+            045      .7:10 a.m. to 7:14 a.m.
+            046      .7:15 a.m. to 7:19 a.m.
+            047      .7:20 a.m. to 7:24 a.m.
+            048      .7:25 a.m. to 7:29 a.m.
+            049      .7:30 a.m. to 7:34 a.m.
+            050      .7:35 a.m. to 7:39 a.m.
+            051      .7:40 a.m. to 7:44 a.m.
+            052      .7:45 a.m. to 7:49 a.m.
+            053      .7:50 a.m. to 7:54 a.m.
+            054      .7:55 a.m. to 7:59 a.m.
+            055      .8:00 a.m. to 8:04 a.m.
+            056      .8:05 a.m. to 8:09 a.m.
+            057      .8:10 a.m. to 8:14 a.m.
+            058      .8:15 a.m. to 8:19 a.m.
+            059      .8:20 a.m. to 8:24 a.m.
+            060      .8:25 a.m. to 8:29 a.m.
+            061      .8:30 a.m. to 8:34 a.m.
+            062      .8:35 a.m. to 8:39 a.m.
+            063      .8:40 a.m. to 8:44 a.m.
+            064      .8:45 a.m. to 8:49 a.m.
+            065      .8:50 a.m. to 8:54 a.m.
+            066      .8:55 a.m. to 8:59 a.m.
+            067      .9:00 a.m. to 9:04 a.m.
+            068      .9:05 a.m. to 9:09 a.m.
+            069      .9:10 a.m. to 9:14 a.m.
+            070      .9:15 a.m. to 9:19 a.m.
+            071      .9:20 a.m. to 9:24 a.m.
+            072      .9:25 a.m. to 9:29 a.m.
+            073      .9:30 a.m. to 9:34 a.m.
+            074      .9:35 a.m. to 9:39 a.m.
+            075      .9:40 a.m. to 9:44 a.m.
+            076      .9:45 a.m. to 9:49 a.m.
+            077      .9:50 a.m. to 9:54 a.m.
+            078      .9:55 a.m. to 9:59 a.m.
+            079      .10:00 a.m. to 10:09 a.m.
+            080      .10:10 a.m. to 10:19 a.m.
+            081      .10:20 a.m. to 10:29 a.m.
+            082      .10:30 a.m. to 10:39 a.m.
+            083      .10:40 a.m. to 10:49 a.m.
+            084      .10:50 a.m. to 10:59 a.m.
+            085      .11:00 a.m. to 11:09 a.m.
+            086      .11:10 a.m. to 11:19 a.m.
+            087      .11:20 a.m. to 11:29 a.m.
+            088      .11:30 a.m. to 11:39 a.m.
+            089      .11:40 a.m. to 11:49 a.m.
+            090      .11:50 a.m. to 11:59 a.m.
+            091      .12:00 p.m. to 12:09 p.m.
+            092      .12:10 p.m. to 12:19 p.m.
+            093      .12:20 p.m. to 12:29 p.m.
+            094      .12:30 p.m. to 12:39 p.m.
+            095      .12:40 p.m. to 12:49 p.m.
+            096      .12:50 p.m. to 12:59 p.m.
+            097      .1:00 p.m. to 1:09 p.m.
+            098      .1:10 p.m. to 1:19 p.m.
+            099      .1:20 p.m. to 1:29 p.m.
+            100      .1:30 p.m. to 1:39 p.m.
+            101      .1:40 p.m. to 1:49 p.m.
+            102      .1:50 p.m. to 1:59 p.m.
+            103      .2:00 p.m. to 2:09 p.m.
+            104      .2:10 p.m. to 2:19 p.m.
+            105      .2:20 p.m. to 2:29 p.m.
+            106      .2:30 p.m. to 2:39 p.m.
+            107      .2:40 p.m. to 2:49 p.m.
+            108      .2:50 p.m. to 2:59 p.m.
+            109      .3:00 p.m. to 3:09 p.m.
+            110      .3:10 p.m. to 3:19 p.m.
+            111      .3:20 p.m. to 3:29 p.m.
+            112      .3:30 p.m. to 3:39 p.m.
+            113      .3:40 p.m. to 3:49 p.m.
+            114      .3:50 p.m. to 3:59 p.m.
+            115      .4:00 p.m. to 4:09 p.m.
+            116      .4:10 p.m. to 4:19 p.m.
+            117      .4:20 p.m. to 4:29 p.m.
+            118      .4:30 p.m. to 4:39 p.m.
+            119      .4:40 p.m. to 4:49 p.m.
+            120      .4:50 p.m. to 4:59 p.m.
+            121      .5:00 p.m. to 5:09 p.m.
+            122      .5:10 p.m. to 5:19 p.m.
+            123      .5:20 p.m. to 5:29 p.m.
+            124      .5:30 p.m. to 5:39 p.m.
+            125      .5:40 p.m. to 5:49 p.m.
+            126      .5:50 p.m. to 5:59 p.m.
+            127      .6:00 p.m. to 6:09 p.m.
+            128      .6:10 p.m. to 6:19 p.m.
+            129      .6:20 p.m. to 6:29 p.m.
+            130      .6:30 p.m. to 6:39 p.m.
+            131      .6:40 p.m. to 6:49 p.m.
+            132      .6:50 p.m. to 6:59 p.m.
+            133      .7:00 p.m. to 7:29 p.m.
+            134      .7:30 p.m. to 7:59 p.m.
+            135      .8:00 p.m. to 8:29 p.m.
+            136      .8:30 p.m. to 8:59 p.m.
+            137      .9:00 p.m. to 9:09 p.m.
+            138      .9:10 p.m. to 9:19 p.m.
+            139      .9:20 p.m. to 9:29 p.m.
+            140      .9:30 p.m. to 9:39 p.m.
+            141      .9:40 p.m. to 9:49 p.m.
+            142      .9:50 p.m. to 9:59 p.m.
+            143      .10:00 p.m. to 10:09 p.m.
+            144      .10:10 p.m. to 10:19 p.m.
+            145      .10:20 p.m. to 10:29 p.m.
+            146      .10:30 p.m. to 10:39 p.m.
+            147      .10:40 p.m. to 10:49 p.m.
+            148      .10:50 p.m. to 10:59 p.m.
+            149      .11:00 p.m. to 11:29 p.m.
+            150      .11:30 p.m. to 11:59 p.m.
+
+POBP        Character   3
+Place of birth (Recode)
+            001      .Alabama/AL
+            002      .Alaska/AK
+            004      .Arizona/AZ
+            005      .Arkansas/AR
+            006      .California/CA
+            008      .Colorado/CO
+            009      .Connecticut/CT
+            010      .Delaware/DE
+            011      .District of Columbia/DC
+            012      .Florida/FL
+            013      .Georgia/GA
+            015      .Hawaii/HI
+            016      .Idaho/ID
+            017      .Illinois/IL
+            018      .Indiana/IN
+            019      .Iowa/IA
+            020      .Kansas/KS
+            021      .Kentucky/KY
+            022      .Louisiana/LA
+            023      .Maine/ME
+            024      .Maryland/MD
+            025      .Massachusetts/MA
+            026      .Michigan/MI
+            027      .Minnesota/MN
+            028      .Mississippi/MS
+            029      .Missouri/MO
+            030      .Montana/MT
+            031      .Nebraska/NE
+            032      .Nevada/NV
+            033      .New Hampshire/NH
+            034      .New Jersey/NJ
+            035      .New Mexico/NM
+            036      .New York/NY
+            037      .North Carolina/NC
+            038      .North Dakota/ND
+            039      .Ohio/OH
+            040      .Oklahoma/OK
+            041      .Oregon/OR
+            042      .Pennsylvania/PA
+            044      .Rhode Island/RI
+            045      .South Carolina/SC
+            046      .South Dakota/SD
+            047      .Tennessee/TN
+            048      .Texas/TX
+            049      .Utah/UT
+            050      .Vermont/VT
+            051      .Virginia/VA
+            053      .Washington/WA
+            054      .West Virginia/WV
+            055      .Wisconsin/WI
+            056      .Wyoming/WY
+            060      .American Samoa
+            066      .Guam
+            069      .Commonwealth of the Northern Mariana Islands
+            072      .Puerto Rico
+            078      .US Virgin Islands
+            100      .Albania
+            102      .Austria
+            103      .Belgium
+            104      .Bulgaria
+            105      .Czechoslovakia
+            106      .Denmark
+            108      .Finland
+            109      .France
+            110      .Germany
+            116      .Greece
+            117      .Hungary
+            118      .Iceland
+            119      .Ireland
+            120      .Italy
+            126      .Netherlands
+            127      .Norway
+            128      .Poland
+            129      .Portugal
+            130      .Azores Islands
+            132      .Romania
+            134      .Spain
+            136      .Sweden
+            137      .Switzerland
+            138      .United Kingdom, Not Specified
+            139      .England
+            140      .Scotland
+            142      .Northern Ireland
+            147      .Yugoslavia
+            148      .Czech Republic
+            149      .Slovakia
+            150      .Bosnia and Herzegovina
+            151      .Croatia
+            152      .Macedonia
+            154      .Serbia
+            156      .Latvia
+            157      .Lithuania
+            158      .Armenia
+            159      .Azerbaijan
+            160      .Belarus
+            161      .Georgia
+            162      .Moldova
+            163      .Russia
+            164      .Ukraine
+            165      .USSR
+            166      .Europe
+            167      .Kosovo
+            168      .Montenegro
+            169      .Other Europe, Not Specified
+            200      .Afghanistan
+            202      .Bangladesh
+            203      .Bhutan
+            205      .Myanmar
+            206      .Cambodia
+            207      .China
+            209      .Hong Kong
+            210      .India
+            211      .Indonesia
+            212      .Iran
+            213      .Iraq
+            214      .Israel
+            215      .Japan
+            216      .Jordan
+            217      .Korea
+            218      .Kazakhstan
+            219      .Kyrgyzstan
+            222      .Kuwait
+            223      .Laos
+            224      .Lebanon
+            226      .Malaysia
+            228      .Mongolia
+            229      .Nepal
+            231      .Pakistan
+            233      .Philippines
+            235      .Saudi Arabia
+            236      .Singapore
+            238      .Sri Lanka
+            239      .Syria
+            240      .Taiwan
+            242      .Thailand
+            243      .Turkey
+            245      .United Arab Emirates
+            246      .Uzbekistan
+            247      .Vietnam
+            248      .Yemen
+            249      .Asia
+            253      .South Central Asia, Not Specified
+            254      .Other Asia, Not Specified
+            300      .Bermuda
+            301      .Canada
+            303      .Mexico
+            310      .Belize
+            311      .Costa Rica
+            312      .El Salvador
+            313      .Guatemala
+            314      .Honduras
+            315      .Nicaragua
+            316      .Panama
+            321      .Antigua and Barbuda
+            323      .Bahamas
+            324      .Barbados
+            327      .Cuba
+            328      .Dominica
+            329      .Dominican Republic
+            330      .Grenada
+            332      .Haiti
+            333      .Jamaica
+            338      .St. Kitts-Nevis
+            339      .St. Lucia
+            340      .St. Vincent and the Grenadines
+            341      .Trinidad and Tobago
+            343      .West Indies
+            344      .Caribbean, Not Specified
+            360      .Argentina
+            361      .Bolivia
+            362      .Brazil
+            363      .Chile
+            364      .Colombia
+            365      .Ecuador
+            368      .Guyana
+            369      .Paraguay
+            370      .Peru
+            372      .Uruguay
+            373      .Venezuela
+            374      .South America
+            399      .Americas, Not Specified
+            400      .Algeria
+            407      .Cameroon
+            408      .Cabo Verde
+            412      .Congo
+            414      .Egypt
+            416      .Ethiopia
+            417      .Eritrea
+            420      .Gambia
+            421      .Ghana
+            423      .Guinea
+            425      .Ivory Coast
+            427      .Kenya
+            429      .Liberia
+            430      .Libya
+            436      .Morocco
+            440      .Nigeria
+            442      .Rwanda
+            444      .Senegal
+            447      .Sierra Leone
+            448      .Somalia
+            449      .South Africa
+            451      .Sudan
+            453      .Tanzania
+            454      .Togo
+            456      .Tunisia
+            457      .Uganda
+            459      .Democratic Republic of Congo (Zaire)
+            460      .Zambia
+            461      .Zimbabwe
+            462      .Africa
+            463      .South Sudan
+            464      .Northern Africa, Not Specified
+            467      .Western Africa, Not Specified
+            468      .Other Africa, Not Specified
+            469      .Eastern Africa, Not Specified
+            501      .Australia
+            508      .Fiji
+            511      .Marshall Islands
+            512      .Micronesia
+            515      .New Zealand
+            523      .Tonga
+            527      .Samoa
+            554      .Other US Island Areas, Oceania, Not Specified, or at Sea
+
+WKHP        Numeric     2
+Usual hours worked per week past 12 months
+            bb     .N/A (less than 16 years old/did not work during the past 12 months)
+            1..98  .1 to 98 usual hours
+            99     .99 or more usual hours
+
+SEX         Character   1
+Sex
+            1    .Male
+            2    .Female
+
+RAC1P       Character   1
+Recoded detailed race code
+            1    .White alone
+            2    .Black or African American alone
+            3    .American Indian alone
+            4    .Alaska Native alone
+            5    .American Indian and Alaska Native tribes specified; or American Indian or Alaska Native, not specified and no other races
+            6    .Asian alone
+            7    .Native Hawaiian and Other Pacific Islander alone
+            8    .Some Other Race alone
+            9    .Two or More Races
